@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AB71AB71-043E-4424-91FF-31CC76BB9056}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Inventario3</RootNamespace>
+    <AssemblyName>Inventario3</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BDinventarioDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDinventarioDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleado.Designer.cs">
+      <DependentUpon>Empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntradaEdicionAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntradaEdicionAdmin.Designer.cs">
+      <DependentUpon>EntradaEdicionAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntradaEdicionEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntradaEdicionEmpleado.Designer.cs">
+      <DependentUpon>EntradaEdicionEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntradaProductoEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntradaProductoEmpleado.Designer.cs">
+      <DependentUpon>EntradaProductoEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntradaProductosAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntradaProductosAdmin.Designer.cs">
+      <DependentUpon>EntradaProductosAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu2Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu2Admin.Designer.cs">
+      <DependentUpon>Menu2Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu2Empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu2Empleado.Designer.cs">
+      <DependentUpon>Menu2Empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="proveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="proveedores.Designer.cs">
+      <DependentUpon>proveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProveedoresEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProveedoresEmpleados.Designer.cs">
+      <DependentUpon>ProveedoresEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroEmpleados.Designer.cs">
+      <DependentUpon>RegistroEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalidaEdicionAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalidaEdicionAdmin.Designer.cs">
+      <DependentUpon>SalidaEdicionAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalidaEdicionEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalidaEdicionEmpleado.Designer.cs">
+      <DependentUpon>SalidaEdicionEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalidaProductosAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalidaProductosAdmin.Designer.cs">
+      <DependentUpon>SalidaProductosAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalidaProductosEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalidaProductosEmpleado.Designer.cs">
+      <DependentUpon>SalidaProductosEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StockProductosAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StockProductosAdmin.Designer.cs">
+      <DependentUpon>StockProductosAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StockProductosEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StockProductosEmpleados.Designer.cs">
+      <DependentUpon>StockProductosEmpleados.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empleado.resx">
+      <DependentUpon>Empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntradaEdicionAdmin.resx">
+      <DependentUpon>EntradaEdicionAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntradaEdicionEmpleado.resx">
+      <DependentUpon>EntradaEdicionEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntradaProductoEmpleado.resx">
+      <DependentUpon>EntradaProductoEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntradaProductosAdmin.resx">
+      <DependentUpon>EntradaProductosAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu2Admin.resx">
+      <DependentUpon>Menu2Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu2Empleado.resx">
+      <DependentUpon>Menu2Empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="proveedores.resx">
+      <DependentUpon>proveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProveedoresEmpleados.resx">
+      <DependentUpon>ProveedoresEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroEmpleados.resx">
+      <DependentUpon>RegistroEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalidaEdicionAdmin.resx">
+      <DependentUpon>SalidaEdicionAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalidaEdicionEmpleado.resx">
+      <DependentUpon>SalidaEdicionEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalidaProductosAdmin.resx">
+      <DependentUpon>SalidaProductosAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalidaProductosEmpleado.resx">
+      <DependentUpon>SalidaProductosEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StockProductosAdmin.resx">
+      <DependentUpon>StockProductosAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StockProductosEmpleados.resx">
+      <DependentUpon>StockProductosEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="BDinventarioDataSet.xsc">
+      <DependentUpon>BDinventarioDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BDinventarioDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BDinventarioDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BDinventarioDataSet.xss">
+      <DependentUpon>BDinventarioDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\empleados.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\entrada.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\image-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\productos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\proveedores.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\salida.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
